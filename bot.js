@@ -27,8 +27,7 @@ client.on('messageCreate', async (message) => {
     if (message.channel.id === CHANNEL_ID) {
 
         const emojiMap = {
-            'avant garde': '1202544420197634159',
-            'avantgarde': '1202544420197634159',
+            'avant': '1202544420197634159',
             'conventional': '1205887752608940033',
             'abstract': '1205887749182197810',
             'assemblage': '1205887751069765642',
@@ -39,7 +38,8 @@ client.on('messageCreate', async (message) => {
             'surreal': '1205887760741961788',
             'imperial': '1208493660250054716',
             'trans': '1253497562535694447',
-            'transgender': '1253497562535694447'
+            'guh': '1290614430429876286',
+            'guy': '1287143588341350490'
         };
 
         for (const [keyword, emojiId] of Object.entries(emojiMap)) {
