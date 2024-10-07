@@ -15,6 +15,22 @@ const TOKEN = process.env.DISCORD_TOKEN;
 const CHANNEL_ID = process.env.CHANNEL_ID;
 
 
+client.on('shardError', error => {
+    console.error('A websocket connection encountered an error:', error);
+});
+
+client.on('disconnect', (event) => {
+    console.log(`Disconnected: ${event.reason}`);
+});
+
+client.on('reconnecting', () => {
+    console.log('Reconnecting...');
+});
+
+client.on('debug', info => {
+    console.log(`Debug info: ${info}`);
+});
+
 client.once('ready', () => {
     console.log(`Logged in as ${client.user.tag}`);
 });

@@ -18,6 +18,18 @@ var client = new _discord.Client({
 });
 var TOKEN = process.env.DISCORD_TOKEN;
 var CHANNEL_ID = process.env.CHANNEL_ID;
+client.on('shardError', function (error) {
+  console.error('A websocket connection encountered an error:', error);
+});
+client.on('disconnect', function (event) {
+  console.log("Disconnected: ".concat(event.reason));
+});
+client.on('reconnecting', function () {
+  console.log('Reconnecting...');
+});
+client.on('debug', function (info) {
+  console.log("Debug info: ".concat(info));
+});
 client.once('ready', function () {
   console.log("Logged in as ".concat(client.user.tag));
 });
