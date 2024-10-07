@@ -3,14 +3,14 @@
   "private": true,
   "version": "1.0.0",
   "description": "Discord example app",
-  "main": "bot.js",
+  "main": "app.js",
   "type": "module",
   "engines": {
     "node": ">=18.x"
   },
   "scripts": {
-    "start": "node bot.js",
-    "dev": "nodemon bot.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "author": "Shay DeWael",
   "license": "MIT",
